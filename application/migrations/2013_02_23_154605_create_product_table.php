@@ -15,6 +15,7 @@ class Create_Product_Table {
                 $table->integer('ingridient_id');
                 $table->integer('brand_id');
                 $table->string('desc', 255);
+                $table->timestamps();
             });
 	}
 

@@ -12,7 +12,7 @@
  */
 class Ingridient extends Eloquent
 {
-    //put your code here
+     public static $timestamps = true;
 }
 
 ?>

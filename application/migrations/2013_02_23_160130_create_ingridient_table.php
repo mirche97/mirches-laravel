@@ -12,7 +12,8 @@ class Create_Ingridient_Table {
 		//
             Schema::create('ingridients', function($table){
                 $table->increments('id');
-                $table->integer('name');
+                $table->string('name');
+                $table->timestamps();
 
             });
 	}

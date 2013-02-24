@@ -13,6 +13,7 @@ class Create_Brand_Table {
             Schema::create('brands', function($table){
                 $table->increments('id');
                 $table->string('name');
+                $table->timestamps();
 
             });
 	}

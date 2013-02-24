@@ -10,6 +10,9 @@
 	{{ HTML::script('http://code.jquery.com/jquery-1.9.1.min.js') }}
         {{ HTML::script('bootstrap/js/bootstrap.min.js') }}
         {{ HTML::script('bootstrap/js/bootstrap-editable.min.js') }}
+        @foreach ($head['js'] as $script)
+            {{ $script }}
+        @endforeach
 </head>
 <body>
     <div class="container">

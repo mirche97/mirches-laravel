@@ -14,6 +14,7 @@ class Create_Pack_Table {
                 $table->increments('id');
                 $table->integer('amount');
                 $table->string('uom');
+                $table->timestamps();
             });
 	}
 
