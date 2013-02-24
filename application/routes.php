@@ -121,3 +121,4 @@ Route::filter('auth', function()
 Route::controller('admin.price');
 Route::controller('admin.ingridient');
 Route::controller('admin.pack');
+Route::controller('admin.brand');
