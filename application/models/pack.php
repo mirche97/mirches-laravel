@@ -17,6 +17,17 @@ class Pack extends Eloquent
     public static function uomValues() {
         return  array('g', 'kg', 'ml', 'l', 'eM', 'eL');
     }
+
+    /**
+     * pack values as regular select
+     */
+    public static function packLookup(){
+
+        $packs  = Pack::all();
+
+        return View::make('admin.pack.lookup')->with('packs', $packs);
+
+    }
 }
 
 ?>

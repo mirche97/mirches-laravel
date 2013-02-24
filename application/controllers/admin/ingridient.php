@@ -84,5 +84,21 @@ class Admin_Ingridient_Controller extends Base_Controller
 
         return json_encode($json);
     }
+
+    /**
+     * ingridient lookup as json object
+     */
+    public function get_lookup() {
+        $ingridients  = Ingridient::all();
+
+        $json = array();
+
+        foreach ($ingridients as $ing) {
+            $json[] = array('id' => $ing->id, 'text' => $ing->name);
+        }
+
+        return json_encode($json);
+    }
+
 }
 

@@ -13,6 +13,7 @@ class Create_Product_Table {
             Schema::create('products', function($table){
                 $table->increments('id');
                 $table->integer('ingridient_id');
+                $table->integer('pack_id');
                 $table->integer('brand_id');
                 $table->string('desc', 255);
                 $table->timestamps();

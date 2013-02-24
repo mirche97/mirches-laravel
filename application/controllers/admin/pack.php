@@ -87,18 +87,42 @@ class Admin_Pack_Controller extends Base_Controller
         return json_encode($json);
     }
 
+    /**
+     * uom values as array for editable lookup
+     */
     public function get_uom() {
 
         return Pack::uomValues();
     }
 
+    /**
+     * pack lookup as json object
+     */
+    public function get_lookup() {
+        $packs  = Pack::all();
+
+        $json = array();
+
+        foreach ($packs as $pack) {
+            $json[] = array('id' => $pack->id, 'text' => $pack->amount." ".$pack->uom);
+        }
+
+        return json_encode($json);
+    }
+
+    /**
+     * uom values as regular select
+     */
     public static function uomLookup(){
 
-    $uom = Pack::uomValues();
+        $uom = Pack::uomValues();
 
-    return View::make('base.uom_lookup')->with('uom', $uom);
+        return View::make('base.uom_lookup')->with('uom', $uom);
+
+    }
+
+    
 
 
-}
 }
 

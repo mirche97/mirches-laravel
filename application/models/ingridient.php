@@ -13,6 +13,17 @@
 class Ingridient extends Eloquent
 {
      public static $timestamps = true;
+
+    /**
+     * pack values as regular select
+     */
+    public static function lookup(){
+
+        $ingridients  = self::all();
+
+        return View::make('admin.ingridient.lookup')->with('ingridients', $ingridients);
+
+    }
 }
 
 ?>
