@@ -13,6 +13,10 @@
 class Pack extends Eloquent
 {
     //put your code here
+
+    public static function uomValues() {
+        return  array('g', 'kg', 'ml', 'l', 'eM', 'eL');
+    }
 }
 
 ?>

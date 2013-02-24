@@ -19,6 +19,9 @@ class Admin_Ingridient_Controller extends Base_Controller
 
         $head['js'] = array();
         $head['js'][] = HTML::script('js/ingridient.js');
+
+
+
         return View::make('admin.ingridient.index')
                 ->with('head', $head)
                 ->with('model', 'Ingridienten');
